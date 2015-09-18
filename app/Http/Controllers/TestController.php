@@ -9,8 +9,11 @@ use App\Http\Controllers\Controller;
 
 class TestController extends Controller{
     public function index($nome){
-        
-        return "ola $nome";
+        return view('test/index', ['nome' => $nome]);
+    }
+
+    public function notas(){
+    	return view('test.notas');
     }
     
 }
